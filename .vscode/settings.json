@@ -1,0 +1,27 @@
+{
+    "files.associations": {
+        "fdcandriver.h": "c",
+        "main.h": "c",
+        "fdcan.h": "c",
+        "stm32g0xx_hal.h": "c",
+        "stm32g0xx_hal_conf.h": "c",
+        "gpio.h": "c",
+        "uart_lib.h": "c",
+        "structers.h": "c",
+        "memory_map.h": "c",
+        "macros.h": "c",
+        "image.h": "c",
+        "bootloader.h": "c",
+        "crc32.h": "c",
+        "can_lib.h": "c",
+        "app.h": "c",
+        "can_tp_app.h": "c",
+        "tim.h": "c",
+        "isotp.h": "c",
+        "isotp_types.h": "c",
+        "firmware_upgrade_app.h": "c",
+        "stm32f4xx_hal.h": "c",
+        "enumrator.h": "c"
+    },
+    "cortex-debug.variableUseNaturalFormat": true
+}

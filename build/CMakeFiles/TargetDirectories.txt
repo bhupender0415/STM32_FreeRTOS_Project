@@ -1,0 +1,3 @@
+D:/Zpersonal_data/backup/build/CMakeFiles/ThreadX-app.elf.dir
+D:/Zpersonal_data/backup/build/CMakeFiles/edit_cache.dir
+D:/Zpersonal_data/backup/build/CMakeFiles/rebuild_cache.dir
