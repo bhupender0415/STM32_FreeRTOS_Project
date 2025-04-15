@@ -29,6 +29,11 @@ set(COMMON_INCLUDE
     Drivers/STM32F4xx_HAL_Driver/Inc/Legacy
     Drivers/CMSIS/Device/ST/STM32F4xx/Include
     Drivers/CMSIS/Include
+
+    Library/Middleware/FreeRTOS
+    Library/Middleware/FreeRTOS/include
+    Library/Middleware/FreeRTOS/portable/GCC/ARM_CM4F
+    
     )
     
 set(COMMON_FILES
@@ -38,7 +43,6 @@ set(COMMON_FILES
     Core/Src/stm32f4xx_it.c 
     Core/Src/stm32f4xx_hal_msp.c
     Core/Src/system_stm32f4xx.c
-    Core/Src/stm32f4xx_hal_timebase_tim.c
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c
@@ -54,6 +58,17 @@ set(COMMON_FILES
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+
+    Library/Middleware/FreeRTOS/portable/GCC/ARM_CM4F/port.c
+    Library/Middleware/FreeRTOS/portable/MemMang/heap_4.c
+    Library/Middleware/FreeRTOS/croutine.c
+    Library/Middleware/FreeRTOS/event_groups.c
+    Library/Middleware/FreeRTOS/list.c
+    Library/Middleware/FreeRTOS/queue.c
+    Library/Middleware/FreeRTOS/tasks.c 
+    Library/Middleware/FreeRTOS/timers.c
+    Library/Middleware/FreeRTOS/stream_buffer.c
+
     
     startup_stm32f401xe.s
     )
