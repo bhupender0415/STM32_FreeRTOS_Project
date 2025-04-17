@@ -98,7 +98,7 @@ int main(void)
   status = xTaskCreate( task1Handler, 
                         "Task", 
                         1000, 
-                        "Hello world from task 1\r\n", 
+                        "Hello world from task 1 \r\n", 
                         2, 
                         &task1Handle );
 
@@ -107,7 +107,7 @@ int main(void)
   status = xTaskCreate( task2Handler, 
                         "Task", 
                         1000, 
-                        "Hello world from task 2\r\n", 
+                        "Hello world from task 2 \r\n", 
                         1, 
                         &task2Handle );
 
