@@ -1,0 +1,20 @@
+CMakeFiles/ThreadX-app.elf.dir/Library/Middleware/FreeRTOS/croutine.c.obj: \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/croutine.c \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/include/FreeRTOS.h \
+ c\:\gcc-arm-none-eabi-10-2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stddef.h \
+ c\:\gcc-arm-none-eabi-10-2020-q4-major\lib\gcc\arm-none-eabi\10.2.1\include\stdint.h \
+ c\:\gcc-arm-none-eabi-10-2020-q4-major\arm-none-eabi\include\stdint.h \
+ c\:\gcc-arm-none-eabi-10-2020-q4-major\arm-none-eabi\include\machine\_default_types.h \
+ c\:\gcc-arm-none-eabi-10-2020-q4-major\arm-none-eabi\include\sys\features.h \
+ c\:\gcc-arm-none-eabi-10-2020-q4-major\arm-none-eabi\include\_newlib_version.h \
+ c\:\gcc-arm-none-eabi-10-2020-q4-major\arm-none-eabi\include\sys\_intsup.h \
+ c\:\gcc-arm-none-eabi-10-2020-q4-major\arm-none-eabi\include\sys\_stdint.h \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/FreeRTOSConfig.h \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/include/projdefs.h \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/include/portable.h \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/include/deprecated_definitions.h \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/portable/GCC/ARM_CM4F/portmacro.h \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/include/mpu_wrappers.h \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/include/task.h \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/include/list.h \
+ D\:/Zpersonal_data/STM32_FreeRTOS_Project/Library/Middleware/FreeRTOS/include/croutine.h

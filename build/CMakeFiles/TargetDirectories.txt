@@ -1,0 +1,3 @@
+D:/Zpersonal_data/STM32_FreeRTOS_Project/build/CMakeFiles/ThreadX-app.elf.dir
+D:/Zpersonal_data/STM32_FreeRTOS_Project/build/CMakeFiles/edit_cache.dir
+D:/Zpersonal_data/STM32_FreeRTOS_Project/build/CMakeFiles/rebuild_cache.dir
