@@ -18,10 +18,14 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "FreeRTOS.h"
+#include "task.h"
+#include <string.h>
 
 /* USER CODE END Includes */
 
@@ -49,7 +53,8 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+void task2Handler(void *pvParameters);
+void task1Handler(void *pvParameters);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -64,6 +69,9 @@ void SystemClock_Config(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+  TaskHandle_t task1Handle;
+  TaskHandle_t task2Handle;
+  BaseType_t status;
 
   /* USER CODE END 1 */
 
@@ -85,8 +93,28 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
+  status = xTaskCreate( task1Handler, 
+                        "Task", 
+                        1000, 
+                        "Hello world from task 1\r\n", 
+                        2, 
+                        &task1Handle );
 
+  configASSERT( status == pdPASS );
+
+  status = xTaskCreate( task2Handler, 
+                        "Task", 
+                        1000, 
+                        "Hello world from task 2\r\n", 
+                        1, 
+                        &task2Handle );
+
+  configASSERT( status == pdPASS );
+
+  /* start freeRTOS scheduler */
+  vTaskStartScheduler();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -98,6 +126,31 @@ int main(void)
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
+}
+
+/* USER CODE BEGIN 4 */
+void task1Handler(void *pvParameters)
+{
+  char *pcTaskName;
+  pcTaskName = (char *) pvParameters;
+
+  while(1)
+  {
+    HAL_UART_Transmit(&huart2, (uint8_t *)pcTaskName, strlen(pcTaskName), HAL_MAX_DELAY);
+    vTaskDelay(1000);
+  }
+}
+
+void task2Handler(void *pvParameters)
+{
+  char *pcTaskName;
+  pcTaskName = (char *) pvParameters;
+
+  while(1)
+  {
+    HAL_UART_Transmit(&huart2, (uint8_t *)pcTaskName, strlen(pcTaskName), HAL_MAX_DELAY);
+    vTaskDelay(500);
+  }
 }
 
 /**
@@ -149,6 +202,27 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM5 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM5) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
 
 /**
   * @brief  This function is executed in case of error occurrence.

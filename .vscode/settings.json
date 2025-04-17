@@ -21,7 +21,8 @@
         "isotp_types.h": "c",
         "firmware_upgrade_app.h": "c",
         "stm32f4xx_hal.h": "c",
-        "enumrator.h": "c"
+        "enumrator.h": "c",
+        "usart.h": "c"
     },
     "cortex-debug.variableUseNaturalFormat": true
 }

@@ -42,6 +42,8 @@ set(COMMON_FILES
     Core/Src/gpio.c
     Core/Src/stm32f4xx_it.c 
     Core/Src/stm32f4xx_hal_msp.c
+    Core/Src/stm32f4xx_hal_timebase_tim.c
+    Core/Src/usart.c
     Core/Src/system_stm32f4xx.c
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c
@@ -58,6 +60,7 @@ set(COMMON_FILES
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c
     Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c
+    Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
 
     Library/Middleware/FreeRTOS/portable/GCC/ARM_CM4F/port.c
     Library/Middleware/FreeRTOS/portable/MemMang/heap_4.c

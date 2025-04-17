@@ -1,36 +1,19 @@
 {
+    "version": "0.2.0",
     "configurations": [
         {
-            // "gdbServerPath": "xpack-openocd-0.11.0-4/bin/openocd.exe",
-            "cwd": "${workspaceRoot}",
-            "executable": "${env:ELF_PATH}",
+            "cwd": "${workspaceFolder}",
+            "executable": "./build/ThreadX-app.elf",
             "name": "DebugApp",
             "request": "launch",
             "type": "cortex-debug",
-            "showDevDebugOutput": true,
             "servertype": "openocd",
             "runToMain": true,
             "svdFile": "./openocd_debugger/STM32F401.svd",
             "configFiles": [
                 "openocd.cfg"
             ],
-            "showDevDebugOutput": true,
-            "preLaunchTask": "Find ELF"  // This will run the task automatically
-        },
-        {
-            // "gdbServerPath": "xpack-openocd-0.11.0-4/bin/openocd.exe",
-            "cwd": "${workspaceRoot}",
-            "executable": "./build/ThreadX-bl.elf",
-            "name": "DebugBootloader",
-            "request": "launch",
-            "type": "cortex-debug",
-            "showDevDebugOutput": true,
-            "servertype": "openocd",
-            "runToMain": true,
-            "svdFile": "./openocd_debugger/STM32F401.svd",
-            "configFiles": [
-                "openocd.cfg"
-            ]
+            "preLaunchTask": "Find ELF"
         }
     ]
 }

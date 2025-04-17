@@ -22,14 +22,3 @@ if not exist build\%bin_file% (
 :: Run OpenOCD with the found .bin file
 openocd_debugger\bin\openocd.exe -f ./openocd.cfg -c "program build/%bin_file% reset exit 0x08000000"
 
-:: Check if OpenOCD ran successfully
-if %errorlevel% equ 0 (
-    echo Flashing was successful! The microcontroller has been reset.
-) else (
-    echo Flashing failed! Please check the configuration and try again.
-)
-
-:exit
-:: Pause for user acknowledgment
-echo Press any key to exit.
-pause > nul

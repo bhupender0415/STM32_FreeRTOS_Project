@@ -1,0 +1,22 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Find ELF",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "(Get-ChildItem ${workspaceFolder}\\build\\*.elf | Sort-Object LastWriteTime -Descending | Select-Object -First 1).FullName"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "silent"
+            }
+        }
+    ]
+}
